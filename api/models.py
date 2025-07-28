@@ -2,6 +2,7 @@ from django.db import models
 
 # Create a class Book
 class Book(models.Model):
+    book_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     author = models.CharField(max_length=255)
