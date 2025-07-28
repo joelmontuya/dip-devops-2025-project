@@ -71,7 +71,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/joelmontuya/montuya-devops2025
+          images: ghcr.io/joelmontuya/dip-devops-2025-project
       
       - name: Build and push
         uses: docker/build-push-action@v6
