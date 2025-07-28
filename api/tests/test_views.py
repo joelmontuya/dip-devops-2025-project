@@ -9,6 +9,7 @@ class BookViewTest(APITestCase):
     def test_response_is_correct(self):
         book = Book.objects.create(
             **{
+                "book_id": 1,
                 "title": "test_title",
                 "description": "test_description",
                 "author": "test_author"
@@ -21,6 +22,7 @@ class BookViewTest(APITestCase):
         body = response.json()
         assert body== [          
             {
+                'book_id':book.book_id,
                 "title": book.title,
                 "description": book.description,
                 "author": book.author,
@@ -28,7 +30,33 @@ class BookViewTest(APITestCase):
             }
         ]
 
-    
+class BookDeleteTestCase(APITestCase):
+    def setUp(self):
+        # Create a test book
+        self.book = Book.objects.create(
+            title="title",
+            description="To be deleted.",
+            author="author"
+        )
+        self.url = reverse('api:books-delete', kwargs={'book_id': self.book.book_id})
+
+    def test_delete_book_success(self):
+        response = self.client.delete(self.url)
+
+        # Test if deletion returns 204
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+        # Check the book is deleted
+        self.assertEqual(Book.objects.count(), 0)
+
+    def test_delete_nonexistent_book(self):
+        non_existent_url = reverse('api:books-delete', kwargs={'book_id': 999})
+        response = self.client.delete(non_existent_url)
+
+        # Test if 404 is returned
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+        self.assertIn('status_message', response.data)
+ 
 
 class HealthViewTest(APITestCase):
     

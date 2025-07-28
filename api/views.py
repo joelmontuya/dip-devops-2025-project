@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import BookSerializer
+from rest_framework import status
 from .models import Book
 
 #Create an endpoint to perform healthcheck
@@ -33,6 +34,27 @@ class BookView(APIView):
 
         return Response(serializer.data)
     
+    def delete(self, request, *args, **kwargs):
+        book_id = kwargs.get('book_id')
+        print(kwargs)
+        try: 
+            book = Book.objects.get(book_id=book_id)
+            print(book_id, ' ', book)
+        except Book.DoesNotExist:
+                return Response({
+                    'status': status.HTTP_404_NOT_FOUND,
+                    'status_message':f'Book with ID {book_id} does not exist.'
+                },
+                status=status.HTTP_404_NOT_FOUND)
+        
+        book.delete()
+    
+        return Response({
+            'status': status.HTTP_204_NO_CONTENT,
+            'status_message': 'Book was deleted successfully.'
+        }, status=status.HTTP_204_NO_CONTENT)
+           
+            
         
 book_view = BookView.as_view()
 
