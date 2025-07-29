@@ -12,6 +12,8 @@ class BookViewTest(APITestCase):
                 "book_id": 1,
                 "title": "test_title",
                 "description": "test_description",
+                "isbn":"978-1-86197-876-9",
+                "published_date":'2025-10-21',
                 "author": "test_author"
             }
         )
@@ -26,6 +28,8 @@ class BookViewTest(APITestCase):
                 "title": book.title,
                 "description": book.description,
                 "author": book.author,
+                "isbn": book.isbn,
+                "published_date": book.published_date,
                 "created_at": book.created_at.isoformat().replace("+00:00", "Z")               
             }
         ]
