@@ -9,7 +9,7 @@
 
 ### Endpoints: <br />
 <b> GET </b> /api/books/ - The enpoint will return all books contained in the database. <br /><br />
-<b> POST </b> /api/books/ - Adds new book entry in the database.
+<b> POST </b> /api/books/ - Adds new book entry in the database. <br /><br />
 <b> DELETE </b> /api/books/{book_id}/ - Deletes a record of a book in the database witht the use of primary key <b>book_id</b>.
 
 
