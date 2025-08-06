@@ -1,4 +1,4 @@
-# Diploma in Devops - Summber 2025
+# Diploma in Devops - Summer 2025
 ### Submitted by: Joel Albert Montuya
 
 
