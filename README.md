@@ -2,7 +2,7 @@
 ### Submitted by: Joel Albert Montuya
 
 
-# Servie: Books Catalog API
+# Service: Books Catalog API
 
 ### Project Overview:
   <p> This project aims to design, develop, and deploy a book catalog management backend service. The service is implemented using the Django framework, ensuring structured and RESTful endpoints. Additionally, it adopts a DevOps-oriented development cycle, encompassing containerization, automated testing, and deployment of the service. </p>
