@@ -6,16 +6,14 @@
 
 ### Project Overview:
   <p> This project aims to design, develop, and deploy a book catalog management backend service. The service is implemented using the Django framework, ensuring structured and RESTful endpoints. Additionally, it adopts a DevOps-oriented development cycle, encompassing containerization, automated testing, and deployment of the service. </p>
-<br />
-The project includes: <b /> <br />
-<li>
-* Building a Django REST API with endpoints for creating, reading, updating, and deleting book records. <br />
-*	Writing unit tests to validate API functionality. <br />
-* Containerizing the application using Docker and Docker Compose for local development. <br />
-*	Creating a CI/CD pipeline with GitHub Actions to automate builds, testing, image publishing, and Kubernetes deployment. <br />
-* Deploying the app to a Kubernetes cluster using Helm charts, with support for Ingress, environment configs, and service exposure. <br />
-* Maintaining source control with Git and GitHub, following Conventional Commits. <br />
-</li>
+  
+### The project includes: <br />
+<li> Building a Django REST API with endpoints for creating, reading, updating, and deleting book records. </li>
+<li> Writing unit tests to validate API functionality. </li> 
+<li> Containerizing the application using Docker and Docker Compose for local development. </li>
+<li> Creating a CI/CD pipeline with GitHub Actions to automate builds, testing, image publishing, and Kubernetes deployment. </li>
+<li> Deploying the app to a Kubernetes cluster using Helm charts, with support for Ingress, environment configs, and service exposure. </li>
+<li> Maintaining source control with Git and GitHub, following Conventional Commits. </li>
 
 ## CRUD Endpoints: <br />
 ### 1. <b> GET </b> /api/books/ - The enpoint will return all books contained in the database. <br />
@@ -72,7 +70,7 @@ Sample response: <br/>
 ]
 ```
 
-### <b> 3. DELETE </b> /api/books/{book_id}/ - Deletes a record of a book in the database witht the use of primary key <b>'book_id'</b>.
+### <b> 3. DELETE </b> /api/books/{book_id}/ - Deletes a record of a book in the database using primary key <b>'book_id'</b>.
 Sample Response: <br />
 204: No Content - Record was deleted successfully.
 ```json
