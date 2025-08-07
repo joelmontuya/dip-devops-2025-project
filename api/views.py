@@ -36,10 +36,8 @@ class BookView(APIView):
     
     def delete(self, request, *args, **kwargs):
         book_id = kwargs.get('book_id')
-        print(kwargs)
         try: 
             book = Book.objects.get(book_id=book_id)
-            print(book_id, ' ', book)
         except Book.DoesNotExist:
                 return Response({
                     'status': status.HTTP_404_NOT_FOUND,
@@ -53,11 +51,24 @@ class BookView(APIView):
             'status': status.HTTP_204_NO_CONTENT,
             'status_message': 'Book was deleted successfully.'
         }, status=status.HTTP_204_NO_CONTENT)
-           
-            
+    
+    def put(self, request, *args, **kwargs):
+        book_id = kwargs.get('book_id')
+        data= request.data
+        try:
+            book = Book.objects.get(book_id=book_id)
+        except Book.DoesNotExist:
+            return Response({
+                'status': status.HTTP_404_NOT_FOUND,
+                'status_message': f'Book with ID {book_id} does not exist.'
+            }, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = BookSerializer(book, data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(serializer.data)
+
         
 book_view = BookView.as_view()
-
-
-
 
