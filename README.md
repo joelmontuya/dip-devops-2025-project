@@ -143,4 +143,21 @@ You should now be able to start the server
 ```bash
 $ python manage.py runserver
 ```
+<hr />
 
+
+# Run the Service in Docker
+
+Make entrypoint.sh executable: <br />
+```bash
+  $ chmod +x entrypoint.sh 
+```
+Build and start the containers: <br />
+
+```bash
+  $  docker-compose up
+```
+Test the endpoints by running:
+```curl
+curl --location 'http://localhost:8000/api/books/'
+```
