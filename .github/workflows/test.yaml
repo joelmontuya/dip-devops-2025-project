@@ -84,7 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - semantic-release
-    if: github.ref == 'refs/heads/main' && needs.semantic-release.new-release-published == 'true'
+    if: github.ref == 'refs/heads/main' && needs.semantic-release.new_release_published  == 'true'
     permissions:
       contents: read
       packages: write
