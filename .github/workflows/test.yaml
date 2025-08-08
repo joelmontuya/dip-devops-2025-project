@@ -69,7 +69,7 @@ jobs:
       
       - name: Run semantic-release
         id: semantic
-        uses: cycjimy/semantic-release-action@v4
+        uses: cycjimy/semantic-release-action@v3.4.0
         with:
           extra_plugin: |
             @semantic-release/changelog
