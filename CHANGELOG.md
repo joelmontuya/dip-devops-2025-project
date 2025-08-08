@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.4...v1.0.5) (2025-08-08)
+
+### Bug Fixes
+
+* update releaserc ([1122ed8](https://github.com/joelmontuya/dip-devops-2025-project/commit/1122ed8257204ff409f71446e7980c75b5cb0a4e))
+
 ## [1.0.4](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.3...v1.0.4) (2025-08-08)
 
 ### Bug Fixes
