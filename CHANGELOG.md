@@ -1,3 +1,9 @@
+## [1.0.7](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.6...v1.0.7) (2025-08-08)
+
+### Bug Fixes
+
+* image rendering issue on tags ([4ee9133](https://github.com/joelmontuya/dip-devops-2025-project/commit/4ee9133060ad5f8b0d1a3ae833b5a24f5973b14d))
+
 ## [1.0.6](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.5...v1.0.6) (2025-08-08)
 
 ### Bug Fixes
