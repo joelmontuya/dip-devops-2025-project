@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.3...v1.0.4) (2025-08-08)
+
+### Bug Fixes
+
+* add debugger to identify issue with skipping image creation ([4e56973](https://github.com/joelmontuya/dip-devops-2025-project/commit/4e569730ad9f88ff4a7e6f7debd3f1b5ad24385d))
+
 ## [1.0.3](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.2...v1.0.3) (2025-08-08)
 
 ### Bug Fixes
