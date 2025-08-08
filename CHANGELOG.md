@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.2...v1.0.3) (2025-08-08)
+
+### Bug Fixes
+
+* github automation issue on publishin image ([7da42db](https://github.com/joelmontuya/dip-devops-2025-project/commit/7da42db2b291d8186fc75dfaa2949197ca67540b))
+
 ## [1.0.2](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.1...v1.0.2) (2025-08-08)
 
 ### Bug Fixes
