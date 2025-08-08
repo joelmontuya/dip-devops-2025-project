@@ -1,1 +1,1 @@
-Service deployment completed successfully. The application is now live and accessible. Service's health-check can be access with path: http://localhost:8081/api/
+Service deployment completed successfully. The application is now live and accessible. Service's health-check can be accessed with path: http://localhost:8081/api/
