@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.0...v1.0.1) (2025-08-08)
+
+### Bug Fixes
+
+* semantic releas output value names ([29dd63a](https://github.com/joelmontuya/dip-devops-2025-project/commit/29dd63a5cb9ff36601d7b0910cb421e8cbd45434))
+
 ## 1.0.0 (2025-08-08)
 
 ### Features
