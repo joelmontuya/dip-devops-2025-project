@@ -115,6 +115,7 @@ jobs:
           tags: |
             type=semver, pattern={{version}},value=v${{ needs.semantic-release.outputs.new-release-version }}
       
+      
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
