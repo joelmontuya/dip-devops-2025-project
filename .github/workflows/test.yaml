@@ -52,7 +52,7 @@ jobs:
       - migrations-check
     if: github.ref == 'refs/heads/main'
     outputs:
-      new-released-published: ${{ steps.semantic.outputs.new_release_published }}
+      new-release-published: ${{ steps.semantic.outputs.new_release_published }}
       new-release-version: ${{ steps.semantic.outputs.new_release_version }}
     permissions:
       contents: write
