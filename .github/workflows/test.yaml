@@ -83,13 +83,14 @@ jobs:
         run: |
           echo "New release published: ${{ steps.semantic.outputs.new_release_published }}"
           echo "Version: ${{ steps.semantic.outputs.new_release_version }}"
+          echo "Head: ${{github.ref}}"
           echo "Should create new package: ${{github.ref == 'refs/heads/main' && needs.semantic-release.new_release_published == 'true'}}"
   
   build-docker-image:
     runs-on: ubuntu-latest
     needs:
       - semantic-release
-    #if: github.ref == 'refs/heads/main' && needs.semantic-release.new_release_published == 'true'
+    if: github.ref == 'refs/heads/main' && needs.semantic-release.new_release_published == 'true'
     permissions:
       contents: read
       packages: write
