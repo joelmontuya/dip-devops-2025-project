@@ -15,7 +15,7 @@
             }
         ],
         [
-            "semantic-release/chamgelog",
+            "semantic-release/changelog",
             {
                 "changelogFile": "CHANGELOG.md"
             }
