@@ -5,7 +5,11 @@
 # Service: Books Catalog API
 
 ### Project Overview:
-  <p> This project aims to design, develop, and deploy a book catalog management backend service. The service is implemented using the Django framework, ensuring structured and RESTful endpoints. Additionally, it adopts a DevOps-oriented development cycle, encompassing containerization, automated testing, and deployment of the service. </p>
+  <p> The project's goal is to create, implement, and deploy a backend service
+for managing a book catalog. The service was built using the Django
+framework, which ensures a structured and RESTful endpoints. In addition, the project implemented and follows DevOps-oriented development cycle
+including creation of contrainers for the application and Posgres database, CI/CD using GitHub, and automated deployment of the service through
+Kubernetes and Helm. </p>
   
 ### The project includes: <br />
 <li> Building a Django REST API with endpoints for creating, reading, updating, and deleting book records. </li>
@@ -146,7 +150,7 @@ $ python manage.py runserver
 <hr />
 
 
-# Run the Service in Docker
+# Running the Service in Docker
 
 Make entrypoint.sh executable: <br />
 ```bash
@@ -161,3 +165,42 @@ Test the endpoints by running:
 ```curl
 curl --location 'http://localhost:8000/api/books/'
 ```
+
+<hr />
+
+# Deploying using Kubernetes and Helm
+
+1. Create a cluster by running: 
+```bash
+k3d cluster create <name of cluster>
+--port "8081:80@loadbalancer"
+--port "8443:443@loadbalancer"
+--port "30000-30010:30000-30010@server:0
+```
+
+2. Initialize Postgres Database:
+```bash
+helm install books-database oci://registry-1.docker.io/bitnamicharts/postgresql -f ./deployment/postgres-helm/values.yaml
+```
+
+3.  Create a Kubernetes secret to store ghcr token:
+```bash
+kubectl create secret docker-registry ghcr-token \
+  --docker-server=ghcr.io \
+  --docker-username=<github_username>\
+  --docker-password=<github_classic_token> \
+```
+
+5. Deploy the service using helm:
+```bash
+helm install books-catalog ./deployment/books-catalog-chart
+```
+
+7. Test the service:
+```bash
+curl --location 'http://localhost:8081/api/books/
+```
+
+<hr />
+
+
