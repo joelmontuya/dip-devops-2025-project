@@ -180,6 +180,10 @@ k3d cluster create <name of cluster>
 
 2. Initialize Postgres Database:
 ```bash
+kubectl apply -f ./deployment/postgres-yamls
+```
+   
+```bash
 helm install books-database oci://registry-1.docker.io/bitnamicharts/postgresql -f ./deployment/postgres-helm/values.yaml
 ```
 
@@ -201,6 +205,9 @@ helm install books-catalog ./deployment/books-catalog-chart
 curl --location 'http://localhost:8081/api/books/
 ```
 
+
+
+<img width="1191" height="117" alt="image" src="https://github.com/user-attachments/assets/4c2de1cd-04fe-44aa-9a95-662493339c33" />
+
+<img width="825" height="117" alt="image" src="https://github.com/user-attachments/assets/85851b75-2516-46c0-8093-054181aba730" />
 <hr />
-
-
