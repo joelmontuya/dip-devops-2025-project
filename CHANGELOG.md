@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.8...v1.1.0) (2025-08-12)
+
+### Features
+
+* enable argocd  ([e5f857f](https://github.com/joelmontuya/dip-devops-2025-project/commit/e5f857fd2301d70c421ceaef8d6ffeffae2065c9))
+
 ## [1.0.8](https://github.com/joelmontuya/dip-devops-2025-project/compare/v1.0.7...v1.0.8) (2025-08-08)
 
 ### Bug Fixes
